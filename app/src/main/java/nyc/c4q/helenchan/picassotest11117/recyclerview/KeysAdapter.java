@@ -1,4 +1,4 @@
-package nyc.c4q.helenchan.picassotest11117;
+package nyc.c4q.helenchan.picassotest11117.recyclerview;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
+import nyc.c4q.helenchan.picassotest11117.R;
 import nyc.c4q.helenchan.picassotest11117.network.Keys;
 
 /**
