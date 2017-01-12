@@ -13,7 +13,6 @@ import nyc.c4q.helenchan.picassotest11117.network.Keys;
  * Created by helenchan on 1/11/17.
  */
 public class KeysViewHolder extends RecyclerView.ViewHolder {
-    private static final String MYURL = "Please work";
     TextView keyTV;
     String keyUrl;
     Context context;
@@ -28,7 +27,7 @@ public class KeysViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, KeyActivity.class);
-                intent.putExtra(MYURL, keyUrl);
+                intent.putExtra("urlK", keyUrl);
                 context.startActivity(intent);
             }
         });
