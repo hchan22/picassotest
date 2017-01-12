@@ -13,10 +13,10 @@ import nyc.c4q.helenchan.picassotest11117.network.Keys;
  * Created by helenchan on 1/11/17.
  */
 public class KeysViewHolder extends RecyclerView.ViewHolder {
-    TextView keyTV;
+    private int keyColor;
+    private TextView keyTV;
     String keyUrl;
     Context context;
-    private int keyColor;
 
 
     public KeysViewHolder(final View itemView) {

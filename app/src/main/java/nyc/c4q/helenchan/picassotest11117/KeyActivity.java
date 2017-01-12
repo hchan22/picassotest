@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -12,8 +13,10 @@ import com.squareup.picasso.Picasso;
  */
 
 public class KeyActivity extends AppCompatActivity {
-    ImageView keyboardIV;
-    String url;
+    private String url;
+    private boolean pressTwiceToReturn = false;
+    private ImageView keyboardIV;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,17 @@ public class KeyActivity extends AppCompatActivity {
                 .load(url)
                 .into(keyboardIV);
     }
+
+    @Override
+    public void onBackPressed() {
+        if(pressTwiceToReturn) {
+            super.onBackPressed();
+            return;
+        }
+        this.pressTwiceToReturn = true;
+        Toast.makeText(this, "Press once more to see list", Toast.LENGTH_LONG).show();
+    }
+
 }
 
 
